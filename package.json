@@ -1,0 +1,21 @@
+{
+  "name": "betika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js",
+    "chrome-headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
+    "chrome-headed-test": "npx cypress run --headed --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.9.0"
+  },
+  "dependencies": {
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "cypress-real-events": "^1.7.6"
+  }
+}
