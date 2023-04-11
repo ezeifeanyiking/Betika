@@ -1,9 +1,0 @@
-{
-    "reportDir": "mochawesome-report",
-    "reportFilename": "mochawesome",
-    "reportTitle": "Mochawesome Report",
-    "showPassed": true,
-    "code": true,
-    "quiet": true
-  }
-  

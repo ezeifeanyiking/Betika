@@ -7,6 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       require("cypress-mochawesome-reporter/plugin")(on); // For html report
     },
+    video: false,
     specPattern: "cypress/e2e/Betika/allTests.spec.cy.js",
     watchForFileChanges: false,
     chromeWebSecurity: false,
