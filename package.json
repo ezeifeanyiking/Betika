@@ -6,16 +6,24 @@
   "scripts": {
     "headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js",
     "chrome-headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
-    "chrome-headed-test": "npx cypress run --headed --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome"
+    "chrome-headed-test": "npx cypress run --headed --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
+    "test": "mocha test/*.js --reporter mochawesome --reporter-options reportDir=mochawesome-report",
+    "report": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/mochawesome.json && mochawesome-report-generator mochawesome-report/mochawesome.json -i mochawesome-report/assets -o mochawesome-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.9.0"
+    "cypress": "^12.9.0",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
   },
   "dependencies": {
     "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-real-events": "^1.7.6"
-  }
+  }  
 }
+
+
