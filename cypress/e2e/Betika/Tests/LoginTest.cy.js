@@ -14,7 +14,6 @@ describe("login authentication in desktop view", () => {
   });
 
   it("Verify user is able to login with valid credentials", () => {
-    // cy.get('.session > .logo__image').realSwipe("toTop")
     login.dPhoneNumberField().scrollIntoView().focus().type("0743551248");
     login.dPasswordField().scrollIntoView().focus().type("1234");
     login.dClickBtn().scrollIntoView().click({force: true});
@@ -118,7 +117,7 @@ describe("login authentication in desktop view", () => {
   });
 });
 // -------------------------------------------------------
-describe("login authentication in desktop view", () => {
+describe("login authentication in mobile view", () => {
   
   const login = new Login();
   beforeEach(() => {
@@ -131,7 +130,6 @@ describe("login authentication in desktop view", () => {
   });
 
   it("Verify user is able to login with valid credentials", () => {
-    // cy.get('.session > .logo__image').realSwipe("toTop")
     login.dPhoneNumberField().scrollIntoView().focus().type("0743551248");
     login.dPasswordField().scrollIntoView().focus().type("1234");
     login.dClickBtn().scrollIntoView().click({force: true});

@@ -6,16 +6,7 @@ module.exports = defineConfig({
   reporter: "cypress-mochawesome-reporter", // For html reports
   e2e: {
     setupNodeEvents(on, config) { 
-      // implement node event listeners here
-      on('before:run', async (details) => { // For html report
-        console.log('override before:run');
-        await beforeRunHook(details);
-      });
-
-      on('after:run', async () => {
-        console.log('override after:run');
-        await afterRunHook(); 
-      })
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
     video: false,
     specPattern: "cypress/e2e/Betika/allTests.spec.cy.js",
@@ -31,7 +22,10 @@ module.exports = defineConfig({
           "quite": true,
           "overwrite": false,
           "html": false,
-          "json": true
+          "json": true,
+          "timestamp": "mmddyyyy_HHMMss",
+          "charts": true,
+          "autoOpen": true
       }
   }
   },

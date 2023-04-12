@@ -11,11 +11,8 @@ describe("login authentication", () => {
   });
   beforeEach(() => {
     Cypress.on("uncaught:exception", (err, runnable) => {
-      // returning false here prevents Cypress from failing the test
       return false;
     });
-    // cy.setViewportSize('mobile') // set the screen size to mobile
-    // cy.setViewportSize('desktop') // set the screen size to desktop
     cy.visit("https://www.betika.com/en-ke/s/soccer");
     placeBet.getLoginBtn().click()
     login.dPhoneNumberField().scrollIntoView().focus().type("0743551248");
