@@ -14,5 +14,11 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     requestTimeout: 15000,
     pageLoadTimeout: 120000,
+    reporterOptions: {
+      reportDir: "mochawesome-report",
+      overwrite: false,
+      html: false,
+      json: true
+    }
   },
 });
