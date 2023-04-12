@@ -14,16 +14,15 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     requestTimeout: 15000,
     pageLoadTimeout: 120000,
-    reporterOptions: {
-      reportDir: "cypress/reports/html",
-      overwrite: false,
-      html: false,
-      json: true,
-      charts: true,
-      reportPageTitle: "custom-title",
-      embeddedScreenshots: true,
-      inlineAssets: true,
-      saveAllAttempts: false,
-    },
+    "reporterOptions": {
+      "reporterEnabled": "mochawesome",
+      "mochawesomeReporterOptions": {
+          "reportDir": "cypress/reports/mocha",
+          "quite": true,
+          "overwrite": false,
+          "html": false,
+          "json": true
+      }
+  }
   },
 });
