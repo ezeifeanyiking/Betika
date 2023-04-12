@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js",
-    "chrome-headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
-    "chrome-headed-test": "npx cypress run --headed --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
-    "report": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/mochawesome.json && mochawesome-report-generator mochawesome-report/mochawesome.json -i mochawesome-report/assets -o mochawesome-report",
-    "test": "mocha test.js",
-    "test:report": "mocha test.js --reporter mochawesome --reporter-options reportDir=test-report"
+  "chrome-headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
+  "chrome-headed-test": "npx cypress run --headed --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
+  "report": "cypress run --env report=true && npx mochawesome-merge mochawesome-report/*.json > mochawesome-report/mochawesome.json && npx mochawesome-report-generator mochawesome-report/mochawesome.json -i mochawesome-report/assets -o mochawesome-report",
+  "test": "mocha test.js",
+  "test:report": "mocha test.js --reporter mochawesome --reporter-options reportDir=test-report"
   },
   "keywords": [],
   "author": "",
