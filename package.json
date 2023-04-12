@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js",
-    "chrome-headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome --reporter mochawesome",
+    "chrome-headless-test": "npx cypress run --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
     "chrome-headed-test": "npx cypress run --headed --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
     "report": "mochawesome-merge cypress/reports/html/*.json > cypress/report/output.json",
     "test:report": "mocha test.js --reporter mochawesome --reporter-options reportDir=test-report",
