@@ -9,7 +9,8 @@
     "chrome-headed-test": "npx cypress run --headed --spec cypress/e2e/Betika/allTests.spec.cy.js --browser chrome",
     "report": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/mochawesome.json && mochawesome-report-generator mochawesome-report/mochawesome.json -i mochawesome-report/assets -o mochawesome-report",
     "test": "mocha test.js",
-    "test:report": "mocha test.js --reporter mochawesome --reporter-options reportDir=test-report"
+    "test:report": "mocha test.js --reporter mochawesome --reporter-options reportDir=test-report",
+    "ignore": "Just a test"
   },
   "keywords": [],
   "author": "",
